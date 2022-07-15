@@ -1,53 +1,34 @@
-<script setup lang="ts">
-import HelloWorld from "./components/HelloWorld.vue";
-import TheWelcome from "./components/TheWelcome.vue";
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="./assets/logo.svg"
-      width="125"
-      height="125"
-    />
-
+  <section class="section1">
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <div>
+        <input type="text" placeholder="Search song" class="inputSong" />
+        <div style="width: 100%; height: 1px; background-color: #fff; margin-top: 3px"></div>
+      </div>
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  </section>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
+.section1 {
+  width: 100vw;
+  height: 100vh;
 }
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20vh;
 }
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.inputSong {
+  background-color: var(--background-color);
+  border: none;
+  color: white;
+  font-size: 2rem;
+}
+textarea:focus,
+.inputSong:focus {
+  outline: none;
 }
 </style>
